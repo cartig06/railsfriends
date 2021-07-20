@@ -1,0 +1,27 @@
+<h1>Friend Info</h1>
+<ul class="list-group">
+  <li class="list-group-item" aria-current="true"><p>
+  <strong>First name:</strong>
+  <%= @friend.first_name %>
+</p></li>
+  <li class="list-group-item"><p>
+  <strong>Last name:</strong>
+  <%= @friend.last_name %>
+</p></li>
+  <li class="list-group-item"><p>
+  <strong>Email:</strong>
+  <%= @friend.email %>
+</p></li>
+  <li class="list-group-item"><p>
+  <strong>Phone:</strong>
+  <%= @friend.phone %>
+</p></li>
+  <li class="list-group-item"><p>
+  <strong>Twitter:</strong>
+  <%= @friend.twitter %>
+</p></li>
+</ul> <br>
+
+<%= link_to 'Edit Friend', edit_friend_path(@friend), class:"btn btn-primary" %>
+<%= link_to 'Remove', @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+<%= link_to 'Go Back', friends_path, class:"btn btn-secondary" %>
